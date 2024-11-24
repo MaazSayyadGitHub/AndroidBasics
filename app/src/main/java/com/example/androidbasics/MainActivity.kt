@@ -1,6 +1,7 @@
 package com.example.androidbasics
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -15,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidbasics.databinding.ActivityMainBinding
+import java.io.Serializable
+import java.util.ArrayList
 import java.util.Collections
 
 class MainActivity : AppCompatActivity() {
@@ -86,15 +89,41 @@ class MainActivity : AppCompatActivity() {
 
 
         // Toast
+//        binding.btnShow.setOnClickListener {
+//            Toast(this).apply {
+//                duration = Toast.LENGTH_LONG
+//                view = layoutInflater.inflate(R.layout.custom_toast, null)
+//                show()
+//            }
+//
+//        }
 
-        binding.btnShow.setOnClickListener {
-            Toast(this).apply {
-                duration = Toast.LENGTH_LONG
-                view = layoutInflater.inflate(R.layout.custom_toast, null)
-                show()
-            }
+        // Intents and passing data
+//        binding.btnOpenActivity.setOnClickListener {
+////            Intent(this, SecondActivity::class.java).also {
+////                startActivity(it)
+////            }
+//            val intents = Intent(this, SecondActivity::class.java)
+//            startActivity(intents)
+//        }
 
-        }
+        // Passing Data/Classes (Serializable/Parcelable) between Activities.
+//        binding.sendData.setOnClickListener {
+//            val intent = Intent(this, SecondActivity::class.java)
+////            intent.putExtra("Name", binding.etName.text.toString())
+////            intent.putExtra("Age", binding.etAge.text.toString())
+////            intent.putExtra("Country", binding.etCountry.text.toString())
+//
+//            val person = SamplePerson(binding.etName.text.toString(), binding.etAge.text.toString().toInt(), binding.etCountry.text.toString())
+//            intent.putExtra("person", person)
+//
+//            startActivity(intent)
+//        }
+
+
+
+
+
 
 
 

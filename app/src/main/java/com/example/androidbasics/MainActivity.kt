@@ -65,25 +65,36 @@ class MainActivity : AppCompatActivity() {
 
         // Radio buttons and checkbox
 
-        binding.btnOrder.setOnClickListener {
-            val checkedMeatRadioGroupId = binding.rgMeat.checkedRadioButtonId
-            val meat = findViewById<RadioButton>(checkedMeatRadioGroupId) // radioBtn
+//        binding.btnOrder.setOnClickListener {
+//            val checkedMeatRadioGroupId = binding.rgMeat.checkedRadioButtonId
+//            val meat = findViewById<RadioButton>(checkedMeatRadioGroupId) // radioBtn
+//
+//            val cheese = binding.cbCheese.isChecked
+//            val onions = binding.cbOnions.isChecked
+//            val salad = binding.cbSalad.isChecked
+//
+//
+//            val orderString = "You have Ordered a burger with \n" +
+//                    "${meat.text}" +
+//                    (if (cheese) "\nCheese" else "") +
+//                    (if (onions) "\nOnions" else "") +
+//                    (if (salad) "\nSalad" else "")
+//
+//            binding.tvResult.text = orderString.toString()
+//
+//        }
 
-            val cheese = binding.cbCheese.isChecked
-            val onions = binding.cbOnions.isChecked
-            val salad = binding.cbSalad.isChecked
 
+        // Toast
 
-            val orderString = "You have Ordered a burger with \n" +
-                    "${meat.text}" +
-                    (if (cheese) "\nCheese" else "") +
-                    (if (onions) "\nOnions" else "") +
-                    (if (salad) "\nSalad" else "")
-
-            binding.tvResult.text = orderString.toString()
+        binding.btnShow.setOnClickListener {
+            Toast(this).apply {
+                duration = Toast.LENGTH_LONG
+                view = layoutInflater.inflate(R.layout.custom_toast, null)
+                show()
+            }
 
         }
-
 
 
 

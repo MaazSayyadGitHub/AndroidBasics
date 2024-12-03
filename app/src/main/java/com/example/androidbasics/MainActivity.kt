@@ -120,7 +120,11 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(intent)
 //        }
 
-
+        // goto permission activity
+        //
+        binding.sendData.setOnClickListener {
+            startActivity(Intent(this, ImplicitIntents::class.java))
+        }
 
 
 

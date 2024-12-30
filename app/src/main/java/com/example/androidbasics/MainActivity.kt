@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -123,7 +125,7 @@ class MainActivity : AppCompatActivity() {
         // goto permission activity
         //
         binding.sendData.setOnClickListener {
-            startActivity(Intent(this, ImplicitIntents::class.java))
+            startActivity(Intent(this, AlertDialogActivity::class.java))
         }
 
 
@@ -137,6 +139,24 @@ class MainActivity : AppCompatActivity() {
 //        sortList(list)
 //        println(list)
     }
+
+    // menu bar item
+    /*
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.app_bar_menu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.menu_contact -> Toast.makeText(this, "You Clicked on Add Contacts", Toast.LENGTH_SHORT).show()
+            R.id.menu_fav -> Toast.makeText(this, "You Clicked on Favorites", Toast.LENGTH_SHORT).show()
+            R.id.menu_close -> finish() // we will close app here
+            R.id.menu_setting -> Toast.makeText(this, "You Clicked on Setting", Toast.LENGTH_SHORT).show()
+            R.id.menu_feedback -> Toast.makeText(this, "You Clicked on Feedback", Toast.LENGTH_SHORT).show()
+        }
+        return true
+    }
+     */
 
     // checking errors code.
 //    private fun sortList(list : List<Int>){

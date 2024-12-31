@@ -125,7 +125,7 @@ class MainActivity : AppCompatActivity() {
         // goto permission activity
         //
         binding.sendData.setOnClickListener {
-            startActivity(Intent(this, AlertDialogActivity::class.java))
+            startActivity(Intent(this, SpinnerActivity::class.java))
         }
 
 

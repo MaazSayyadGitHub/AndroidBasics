@@ -125,7 +125,7 @@ class MainActivity : AppCompatActivity() {
         // goto permission activity
         //
         binding.sendData.setOnClickListener {
-            startActivity(Intent(this, SpinnerActivity::class.java))
+            startActivity(Intent(this, RecyclerViewActivity::class.java))
         }
 
 

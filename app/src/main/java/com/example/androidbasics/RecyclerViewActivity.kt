@@ -20,7 +20,12 @@ class RecyclerViewActivity : AppCompatActivity() {
         binding = ActivityRecyclerViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /*
+        // with array
+        var arrList = arrayOf(Todo("Going Home", false))
+         */
 
+        // with list
         var arrTodoList = mutableListOf(
             Todo("Waking Up on 5am", false),
             Todo("Doing 4 hr Deep Work", false),
@@ -29,6 +34,7 @@ class RecyclerViewActivity : AppCompatActivity() {
             Todo("Meditate for 20 min", false),
             Todo("Meditate for 20 min", false)
         )
+
 
         binding.rvTodos.layoutManager = LinearLayoutManager(this)
         val adapter = TodoAdapter(arrTodoList)

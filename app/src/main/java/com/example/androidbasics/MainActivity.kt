@@ -125,7 +125,7 @@ class MainActivity : AppCompatActivity() {
         // goto permission activity
         //
         binding.sendData.setOnClickListener {
-            startActivity(Intent(this, FragmentActivity::class.java))
+            startActivity(Intent(this, BottomNavActivity::class.java))
         }
 
 
